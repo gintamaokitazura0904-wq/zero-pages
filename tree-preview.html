@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoberTree Preview</title>
+  <style>
+    body { background: #050A12; margin: 0; padding: 24px; font-family: -apple-system, sans-serif; }
+    h1 { color: #fff; text-align: center; font-size: 20px; margin-bottom: 8px; }
+    .subtitle { color: #8FA5BC; text-align: center; font-size: 13px; margin-bottom: 32px; }
+    .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+    .card { background: #0C1520; border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 16px; text-align: center; width: 220px; }
+    .label { color: #F5A623; font-size: 13px; margin-top: 8px; font-weight: 600; }
+    .days { color: #8FA5BC; font-size: 11px; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <h1>SoberTree - Refined Design</h1>
+  <p class="subtitle">Dark UI + Gold Glow</p>
+  <div class="grid">
+
+    <!-- 枯れ木 (Day 0) -->
+    <div class="card">
+      <svg width="200" height="240" viewBox="0 0 200 240">
+        <defs>
+          <radialGradient id="deadGround" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#3D2B1F" stop-opacity="0.25"/>
+            <stop offset="1" stop-color="#3D2B1F" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="deadTrunk" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#4A3728"/>
+            <stop offset="1" stop-color="#2A1D13"/>
+          </linearGradient>
+        </defs>
+        <!-- 地面の影 -->
+        <ellipse cx="100" cy="222" rx="45" ry="5" fill="url(#deadGround)"/>
+        <!-- 幹 -->
+        <path d="M97 220 Q95 185 94 165 Q92 145 96 125 L100 118 L104 125 Q108 145 106 165 Q105 185 103 220 Z" fill="url(#deadTrunk)"/>
+        <!-- 枝（右） -->
+        <path d="M104 152 Q116 136 132 118" stroke="#3D2B1F" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M130 121 Q134 108 130 98" stroke="#3D2B1F" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <path d="M120 128 Q126 120 132 118" stroke="#3D2B1F" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+        <!-- 枝（左） -->
+        <path d="M96 144 Q82 128 65 115" stroke="#3D2B1F" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <path d="M68 118 Q62 106 65 96" stroke="#3D2B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        <!-- 小枝 -->
+        <path d="M100 132 Q106 118 110 105" stroke="#3D2B1F" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        <!-- ひび -->
+        <path d="M99 185 L97 178 L100 172" stroke="#1A1210" stroke-width="0.8" fill="none" opacity="0.4"/>
+        <path d="M101 195 L100 190" stroke="#1A1210" stroke-width="0.6" fill="none" opacity="0.3"/>
+      </svg>
+      <div class="label">枯れ木</div>
+      <div class="days">Day 0</div>
+    </div>
+
+    <!-- 芽 (Day 1-6) -->
+    <div class="card">
+      <svg width="200" height="240" viewBox="0 0 200 240">
+        <defs>
+          <radialGradient id="sproutGlow" cx="0.5" cy="0.7" r="0.5">
+            <stop offset="0" stop-color="#34D399" stop-opacity="0.12"/>
+            <stop offset="1" stop-color="#34D399" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="sproutStem" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#059669"/>
+            <stop offset="1" stop-color="#34D399"/>
+          </linearGradient>
+          <radialGradient id="sproutTip" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#F5A623" stop-opacity="0.3"/>
+            <stop offset="1" stop-color="#F5A623" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- 地面のグロー -->
+        <circle cx="100" cy="200" r="50" fill="url(#sproutGlow)"/>
+        <!-- 土 -->
+        <ellipse cx="100" cy="216" rx="22" ry="4" fill="#1A1210"/>
+        <ellipse cx="100" cy="216" rx="18" ry="3" fill="#2A1D13" opacity="0.6"/>
+        <!-- 茎 -->
+        <path d="M100 216 Q99 200 100 185" stroke="url(#sproutStem)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <!-- 葉（左） -->
+        <path d="M100 196 Q86 188 82 178 Q88 184 100 192" fill="#059669" opacity="0.9"/>
+        <path d="M100 196 Q86 188 82 178" stroke="#34D399" stroke-width="0.5" fill="none" opacity="0.5"/>
+        <!-- 葉（右） -->
+        <path d="M100 189 Q114 180 118 170 Q112 177 100 185" fill="#059669" opacity="0.9"/>
+        <path d="M100 189 Q114 180 118 170" stroke="#34D399" stroke-width="0.5" fill="none" opacity="0.5"/>
+        <!-- 新芽の先端 + ゴールドグロー -->
+        <circle cx="100" cy="180" r="12" fill="url(#sproutTip)"/>
+        <path d="M98 185 Q100 174 102 185" fill="#34D399"/>
+        <circle cx="100" cy="177" r="2" fill="#F5A623" opacity="0.4"/>
+      </svg>
+      <div class="label">芽</div>
+      <div class="days">Day 1 - 6</div>
+    </div>
+
+    <!-- 成長中 (Day 7-29) -->
+    <div class="card">
+      <svg width="200" height="240" viewBox="0 0 200 240">
+        <defs>
+          <linearGradient id="growTrunk" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#5D4037"/>
+            <stop offset="1" stop-color="#3E2723"/>
+          </linearGradient>
+          <radialGradient id="growGlow" cx="0.5" cy="0.4" r="0.5">
+            <stop offset="0" stop-color="#34D399" stop-opacity="0.08"/>
+            <stop offset="1" stop-color="#34D399" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="leafCenter" cx="0.5" cy="0.4" r="0.6">
+            <stop offset="0" stop-color="#34D399" stop-opacity="0.15"/>
+            <stop offset="1" stop-color="#059669" stop-opacity="0.8"/>
+          </radialGradient>
+        </defs>
+        <!-- 背景グロー -->
+        <circle cx="100" cy="120" r="70" fill="url(#growGlow)"/>
+        <!-- 地面 -->
+        <ellipse cx="100" cy="222" rx="50" ry="5" fill="#059669" opacity="0.1"/>
+        <!-- 幹 -->
+        <path d="M96 220 Q94 192 93 172 Q92 155 95 140 L100 134 L105 140 Q108 155 107 172 Q106 192 104 220 Z" fill="url(#growTrunk)"/>
+        <!-- 枝 -->
+        <path d="M103 162 Q118 148 126 140" stroke="#5D4037" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <path d="M97 156 Q82 144 74 140" stroke="#5D4037" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <!-- 葉の塊（半透明、レイヤード） -->
+        <ellipse cx="100" cy="108" rx="36" ry="30" fill="#0D3320" opacity="0.9"/>
+        <ellipse cx="74" cy="122" rx="22" ry="19" fill="#0A2E1C" opacity="0.85"/>
+        <ellipse cx="126" cy="120" rx="22" ry="19" fill="#0A2E1C" opacity="0.85"/>
+        <!-- 葉のハイライト -->
+        <ellipse cx="100" cy="105" rx="30" ry="24" fill="url(#leafCenter)"/>
+        <ellipse cx="85" cy="95" rx="18" ry="14" fill="#059669" opacity="0.3"/>
+        <ellipse cx="115" cy="97" rx="18" ry="14" fill="#059669" opacity="0.3"/>
+        <ellipse cx="100" cy="88" rx="14" ry="11" fill="#34D399" opacity="0.15"/>
+        <!-- ゴールドの光粒 -->
+        <circle cx="90" cy="100" r="1.5" fill="#F5A623" opacity="0.3"/>
+        <circle cx="112" cy="95" r="1" fill="#F5A623" opacity="0.25"/>
+        <circle cx="100" cy="85" r="1.2" fill="#F5A623" opacity="0.2"/>
+      </svg>
+      <div class="label">成長中</div>
+      <div class="days">Day 7 - 29</div>
+    </div>
+
+    <!-- 開花 (Day 30-59) -->
+    <div class="card">
+      <svg width="200" height="240" viewBox="0 0 200 240">
+        <defs>
+          <linearGradient id="flowerTrunk" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#5D4037"/>
+            <stop offset="1" stop-color="#3E2723"/>
+          </linearGradient>
+          <radialGradient id="flowerGlow" cx="0.5" cy="0.4" r="0.55">
+            <stop offset="0" stop-color="#F5A623" stop-opacity="0.1"/>
+            <stop offset="1" stop-color="#F5A623" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="petalGlow" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#F5A623" stop-opacity="0.8"/>
+            <stop offset="1" stop-color="#D4891A" stop-opacity="0.2"/>
+          </radialGradient>
+        </defs>
+        <!-- 背景グロー -->
+        <circle cx="100" cy="110" r="80" fill="url(#flowerGlow)"/>
+        <!-- 地面 -->
+        <ellipse cx="100" cy="222" rx="55" ry="5" fill="#F5A623" opacity="0.08"/>
+        <!-- 幹 -->
+        <path d="M95 220 Q93 188 92 168 Q91 148 95 132 L100 124 L105 132 Q109 148 108 168 Q107 188 105 220 Z" fill="url(#flowerTrunk)"/>
+        <!-- 枝 -->
+        <path d="M104 158 Q120 140 130 132" stroke="#5D4037" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M96 150 Q78 135 68 130" stroke="#5D4037" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        <!-- 葉 -->
+        <ellipse cx="100" cy="98" rx="40" ry="33" fill="#0D3320" opacity="0.9"/>
+        <ellipse cx="68" cy="115" rx="26" ry="22" fill="#0A2E1C" opacity="0.85"/>
+        <ellipse cx="132" cy="113" rx="26" ry="22" fill="#0A2E1C" opacity="0.85"/>
+        <ellipse cx="82" cy="84" rx="22" ry="18" fill="#059669" opacity="0.25"/>
+        <ellipse cx="118" cy="86" rx="22" ry="18" fill="#059669" opacity="0.25"/>
+        <ellipse cx="100" cy="78" rx="18" ry="14" fill="#34D399" opacity="0.12"/>
+        <!-- ゴールドの花（グロー付き） -->
+        <circle cx="78" cy="82" r="8" fill="#F5A623" opacity="0.08"/>
+        <circle cx="78" cy="82" r="4" fill="url(#petalGlow)"/>
+        <circle cx="78" cy="82" r="1.5" fill="#FFD080" opacity="0.8"/>
+
+        <circle cx="122" cy="84" r="8" fill="#F5A623" opacity="0.08"/>
+        <circle cx="122" cy="84" r="4" fill="url(#petalGlow)"/>
+        <circle cx="122" cy="84" r="1.5" fill="#FFD080" opacity="0.8"/>
+
+        <circle cx="100" cy="70" r="9" fill="#F5A623" opacity="0.08"/>
+        <circle cx="100" cy="70" r="4.5" fill="url(#petalGlow)"/>
+        <circle cx="100" cy="70" r="1.8" fill="#FFD080" opacity="0.8"/>
+
+        <circle cx="62" cy="105" r="7" fill="#F5A623" opacity="0.06"/>
+        <circle cx="62" cy="105" r="3.5" fill="url(#petalGlow)"/>
+        <circle cx="62" cy="105" r="1.3" fill="#FFD080" opacity="0.7"/>
+
+        <circle cx="138" cy="102" r="7" fill="#F5A623" opacity="0.06"/>
+        <circle cx="138" cy="102" r="3.5" fill="url(#petalGlow)"/>
+        <circle cx="138" cy="102" r="1.3" fill="#FFD080" opacity="0.7"/>
+
+        <circle cx="90" cy="75" r="6" fill="#F5A623" opacity="0.05"/>
+        <circle cx="90" cy="75" r="3" fill="url(#petalGlow)"/>
+        <circle cx="90" cy="75" r="1.2" fill="#FFD080" opacity="0.7"/>
+
+        <circle cx="112" cy="73" r="6" fill="#F5A623" opacity="0.05"/>
+        <circle cx="112" cy="73" r="3" fill="url(#petalGlow)"/>
+        <circle cx="112" cy="73" r="1.2" fill="#FFD080" opacity="0.7"/>
+
+        <!-- 舞う光の粒子 -->
+        <circle cx="52" cy="138" r="1.5" fill="#F5A623" opacity="0.25"/>
+        <circle cx="148" cy="145" r="1.2" fill="#F5A623" opacity="0.2"/>
+        <circle cx="45" cy="120" r="1" fill="#FFD080" opacity="0.15"/>
+      </svg>
+      <div class="label">開花</div>
+      <div class="days">Day 30 - 59</div>
+    </div>
+
+    <!-- 結実 (Day 60-89) -->
+    <div class="card">
+      <svg width="200" height="240" viewBox="0 0 200 240">
+        <defs>
+          <linearGradient id="fruitTrunk" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#5D4037"/>
+            <stop offset="1" stop-color="#3E2723"/>
+          </linearGradient>
+          <radialGradient id="fruitGlow" cx="0.5" cy="0.4" r="0.55">
+            <stop offset="0" stop-color="#F5A623" stop-opacity="0.12"/>
+            <stop offset="1" stop-color="#F5A623" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="fruitBall" cx="0.35" cy="0.35" r="0.65">
+            <stop offset="0" stop-color="#FFD080"/>
+            <stop offset="0.5" stop-color="#F5A623"/>
+            <stop offset="1" stop-color="#D4891A"/>
+          </radialGradient>
+        </defs>
+        <!-- 背景グロー -->
+        <circle cx="100" cy="105" r="85" fill="url(#fruitGlow)"/>
+        <!-- 地面 -->
+        <ellipse cx="100" cy="222" rx="58" ry="5" fill="#F5A623" opacity="0.1"/>
+        <!-- 幹 -->
+        <path d="M94 220 Q91 185 90 162 Q89 142 93 124 L100 114 L107 124 Q111 142 110 162 Q109 185 106 220 Z" fill="url(#fruitTrunk)"/>
+        <!-- 枝 -->
+        <path d="M105 152 Q122 134 135 124" stroke="#5D4037" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <path d="M95 145 Q76 128 62 122" stroke="#5D4037" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M101 132 Q108 118 114 110" stroke="#5D4037" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <!-- 豊かな葉 -->
+        <ellipse cx="100" cy="88" rx="46" ry="38" fill="#0D3320" opacity="0.9"/>
+        <ellipse cx="62" cy="108" rx="28" ry="24" fill="#0A2E1C" opacity="0.85"/>
+        <ellipse cx="138" cy="106" rx="28" ry="24" fill="#0A2E1C" opacity="0.85"/>
+        <ellipse cx="78" cy="74" rx="24" ry="20" fill="#059669" opacity="0.2"/>
+        <ellipse cx="122" cy="76" rx="24" ry="20" fill="#059669" opacity="0.2"/>
+        <ellipse cx="100" cy="68" rx="20" ry="16" fill="#34D399" opacity="0.1"/>
+        <!-- ゴールドの実 -->
+        <circle cx="74" cy="92" r="7" fill="url(#fruitBall)"/>
+        <circle cx="72" cy="89" r="2.5" fill="#FFD080" opacity="0.5"/>
+
+        <circle cx="128" cy="90" r="7.5" fill="url(#fruitBall)"/>
+        <circle cx="126" cy="87" r="2.5" fill="#FFD080" opacity="0.5"/>
+
+        <circle cx="96" cy="72" r="6.5" fill="url(#fruitBall)"/>
+        <circle cx="94" cy="69" r="2" fill="#FFD080" opacity="0.5"/>
+
+        <circle cx="112" cy="78" r="6" fill="url(#fruitBall)"/>
+        <circle cx="110" cy="75" r="2" fill="#FFD080" opacity="0.5"/>
+
+        <circle cx="58" cy="112" r="6" fill="url(#fruitBall)"/>
+        <circle cx="56" cy="109" r="2" fill="#FFD080" opacity="0.4"/>
+
+        <circle cx="140" cy="108" r="6" fill="url(#fruitBall)"/>
+        <circle cx="138" cy="105" r="2" fill="#FFD080" opacity="0.4"/>
+
+        <!-- 光の粒子 -->
+        <circle cx="85" cy="60" r="1.2" fill="#F5A623" opacity="0.3"/>
+        <circle cx="118" cy="64" r="1" fill="#F5A623" opacity="0.25"/>
+        <circle cx="50" cy="98" r="1" fill="#FFD080" opacity="0.2"/>
+        <circle cx="150" cy="95" r="0.8" fill="#FFD080" opacity="0.2"/>
+      </svg>
+      <div class="label">結実</div>
+      <div class="days">Day 60 - 89</div>
+    </div>
+
+    <!-- 大木 (Day 90+) -->
+    <div class="card">
+      <svg width="200" height="240" viewBox="0 0 200 240">
+        <defs>
+          <linearGradient id="fullTrunk" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#5D4037"/>
+            <stop offset="1" stop-color="#3E2723"/>
+          </linearGradient>
+          <radialGradient id="fullGlow" cx="0.5" cy="0.38" r="0.55">
+            <stop offset="0" stop-color="#F5A623" stop-opacity="0.18"/>
+            <stop offset="0.6" stop-color="#F5A623" stop-opacity="0.06"/>
+            <stop offset="1" stop-color="#F5A623" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="crownGlow" cx="0.5" cy="0.3" r="0.6">
+            <stop offset="0" stop-color="#FFD080" stop-opacity="0.12"/>
+            <stop offset="1" stop-color="#F5A623" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="goldFruit" cx="0.35" cy="0.35" r="0.65">
+            <stop offset="0" stop-color="#FFD080"/>
+            <stop offset="0.5" stop-color="#F5A623"/>
+            <stop offset="1" stop-color="#D4891A"/>
+          </radialGradient>
+        </defs>
+        <!-- 大きなゴールドオーラ -->
+        <circle cx="100" cy="95" r="95" fill="url(#fullGlow)"/>
+        <circle cx="100" cy="85" r="65" fill="url(#crownGlow)"/>
+        <!-- 地面 -->
+        <ellipse cx="100" cy="222" rx="65" ry="6" fill="#F5A623" opacity="0.12"/>
+        <!-- 幹（堂々） -->
+        <path d="M92 220 Q88 180 87 158 Q86 138 90 118 L100 105 L110 118 Q114 138 113 158 Q112 180 108 220 Z" fill="url(#fullTrunk)"/>
+        <!-- 根 -->
+        <path d="M92 218 Q78 222 62 219" stroke="#3E2723" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <path d="M108 218 Q122 222 138 219" stroke="#3E2723" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- 太い枝 -->
+        <path d="M108 148 Q128 128 144 118" stroke="#5D4037" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+        <path d="M92 140 Q70 120 54 114" stroke="#5D4037" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <path d="M102 128 Q112 110 120 100" stroke="#5D4037" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+        <path d="M98 125 Q88 108 80 98" stroke="#5D4037" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+        <!-- 壮大な葉 -->
+        <ellipse cx="100" cy="80" rx="54" ry="44" fill="#0D3320" opacity="0.9"/>
+        <ellipse cx="56" cy="102" rx="30" ry="26" fill="#0A2E1C" opacity="0.85"/>
+        <ellipse cx="144" cy="100" rx="30" ry="26" fill="#0A2E1C" opacity="0.85"/>
+        <ellipse cx="72" cy="66" rx="26" ry="22" fill="#059669" opacity="0.18"/>
+        <ellipse cx="128" cy="68" rx="26" ry="22" fill="#059669" opacity="0.18"/>
+        <ellipse cx="100" cy="56" rx="22" ry="18" fill="#34D399" opacity="0.1"/>
+        <!-- ゴールドの実（多め＆大きめ） -->
+        <circle cx="70" cy="84" r="7.5" fill="url(#goldFruit)"/>
+        <circle cx="68" cy="81" r="2.8" fill="#FFD080" opacity="0.6"/>
+
+        <circle cx="132" cy="82" r="7.5" fill="url(#goldFruit)"/>
+        <circle cx="130" cy="79" r="2.8" fill="#FFD080" opacity="0.6"/>
+
+        <circle cx="92" cy="62" r="7" fill="url(#goldFruit)"/>
+        <circle cx="90" cy="59" r="2.5" fill="#FFD080" opacity="0.6"/>
+
+        <circle cx="114" cy="66" r="6.5" fill="url(#goldFruit)"/>
+        <circle cx="112" cy="63" r="2.2" fill="#FFD080" opacity="0.5"/>
+
+        <circle cx="54" cy="105" r="6.5" fill="url(#goldFruit)"/>
+        <circle cx="52" cy="102" r="2.2" fill="#FFD080" opacity="0.5"/>
+
+        <circle cx="146" cy="102" r="6.5" fill="url(#goldFruit)"/>
+        <circle cx="144" cy="99" r="2.2" fill="#FFD080" opacity="0.5"/>
+
+        <circle cx="78" cy="68" r="5.5" fill="url(#goldFruit)"/>
+        <circle cx="76" cy="65" r="1.8" fill="#FFD080" opacity="0.5"/>
+
+        <circle cx="122" cy="58" r="5.5" fill="url(#goldFruit)"/>
+        <circle cx="120" cy="55" r="1.8" fill="#FFD080" opacity="0.5"/>
+
+        <!-- 光の粒子（たくさん） -->
+        <circle cx="42" cy="88" r="1.5" fill="#F5A623" opacity="0.3"/>
+        <circle cx="158" cy="85" r="1.5" fill="#F5A623" opacity="0.3"/>
+        <circle cx="80" cy="48" r="1.2" fill="#FFD080" opacity="0.25"/>
+        <circle cx="120" cy="45" r="1.2" fill="#FFD080" opacity="0.25"/>
+        <circle cx="100" cy="38" r="1" fill="#F5A623" opacity="0.2"/>
+        <circle cx="48" cy="118" r="1" fill="#F5A623" opacity="0.2"/>
+        <circle cx="152" cy="115" r="1" fill="#F5A623" opacity="0.2"/>
+        <circle cx="65" cy="55" r="0.8" fill="#FFD080" opacity="0.15"/>
+        <circle cx="135" cy="52" r="0.8" fill="#FFD080" opacity="0.15"/>
+      </svg>
+      <div class="label">大木</div>
+      <div class="days">Day 90+</div>
+    </div>
+
+  </div>
+</body>
+</html>
